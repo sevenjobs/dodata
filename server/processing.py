@@ -1,3 +1,5 @@
+import functions
+
 def unified(data):
     onedatalist = []
     datalist = []
@@ -9,3 +11,5 @@ def unified(data):
             onedatalist.append(i)
     del onedatalist
     onefunction = datalist[0]
+    del datalist[0]
+    functions.functiondict[f'{onefunction}'](*datalist)
