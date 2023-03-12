@@ -6,7 +6,6 @@ if __name__ == "__main__":
     s.bind((setting.host, setting.port))
     while True:
         c,addr = s.accept()
-        data = c.recv()
-        processing.unified(data)
-        c.send('test!')
+        data = c.recv()   
+        c.send(processing.unified(data))
         c.close()

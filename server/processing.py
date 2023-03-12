@@ -12,4 +12,4 @@ def unified(data):
     del onedatalist
     onefunction = datalist[0]
     del datalist[0]
-    functions.functiondict[f'{onefunction}'](*datalist)
+    return functions.functiondict[f'{onefunction}'](*datalist)
